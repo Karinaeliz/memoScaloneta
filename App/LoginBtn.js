@@ -20,7 +20,7 @@ const formulario= document.querySelector('.login-form');
 const nivel1 = (event) =>{
     event.preventDefault();
     localStorage.setItem('player', input.value);
-    window.location= '../page/juego.html';
+    window.location= 'juego.html';
 }
 formulario.addEventListener('submit', nivel1);
 

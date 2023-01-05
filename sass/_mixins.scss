@@ -1,0 +1,141 @@
+@use 'variables.scss';
+
+@mixin formatogeneral{
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+}
+
+
+
+@mixin btn_Nivel($max){
+    background: variables.$F-Btn;
+    border-radius: 8px;
+    border: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 15px;
+    max-width: $max;
+    width: 100%;
+    font-family: variables.$txt-Pixel ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@mixin containerfooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px;
+    font-family: variables.$txt-Fourtc;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+@mixin justifyCenter{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin mainJuego{
+    margin: 100px auto 50px;
+    @include  justifyCenter();
+    flex-basis: content;
+    font-family: variables.$txt-Fourtc;
+}
+@mixin section1($height, $witdh){
+    background-color: variables.$F-Section;
+    padding: 10px;
+    border-radius: 8px;
+    height: $height;
+    width: $witdh;
+    text-align: center;
+
+}
+@mixin section1h1{
+    font-family: variables.$txt-Pepm;
+    text-align: center;
+    color: variables.$Color-Title;
+    font-size: 3rem;
+}
+@mixin sectGrid($height, $witdh){
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: $witdh;
+    height: $height;
+    gap: 10px;
+    margin-top: 35px;
+    margin-left: 100px;
+    text-align: center;
+    font-size: 3rem;
+
+}
+@mixin gridImg{
+    width: 160px;
+    height: 140px;
+    border-radius: 6px;
+    
+}
+@mixin span{
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+@mixin section2{
+    margin-top: 20px;
+    background-color: variables.$F-Section;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 250px;
+    height: 500px;
+    padding: 20px 20px;
+}
+@mixin estadisticas{
+    height: 80px;
+    border-radius: 8px;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    
+}
+@mixin btnR-I{
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: variables.$border-btn;
+    border-radius: 10px;
+    background-color: variables.$F-Section;
+    height: 60px;
+    width: 180px;
+    font-family: variables.$txt-Fourtc;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+@mixin btnR-Ihover{
+    border: variables.$border-hover;
+    border-radius: 10px;
+    background-color: variables.$F-ReiniciarHover;
+}
+
+@mixin displayGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    height: 600px;
+    gap: 5px;
+    font-size: 1rem;
+}

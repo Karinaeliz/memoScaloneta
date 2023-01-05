@@ -1,0 +1,136 @@
+@use 'mixins.scss';
+@use 'variables.scss';
+
+*{
+    @include mixins.formatogeneral();
+}
+body{
+    background: variables.$F-Boby;
+}
+main{
+    @include mixins.mainJuego();
+}
+.section1{
+    @include mixins.section1(730px, 730px);
+    h1{
+        @include mixins.section1h1();
+    }
+    span{
+        @include mixins.span();
+    }
+    .grid{
+      @include mixins.sectGrid(500px, 500px);
+      img{
+       @include mixins.gridImg();
+        }
+    }
+}
+.section2{
+    @include mixins.section2();
+    .estadisticas{
+        @include mixins.estadisticas();
+    }
+    #reiniciar{
+        @include mixins.btnR-I();
+        margin-top: 100px;
+        &:hover{
+            @include mixins.btnR-Ihover();
+        }
+    }
+    #inicio{
+        @include mixins.btnR-I();
+        &:hover{
+            @include mixins.btnR-Ihover();
+        }
+        a{
+            text-decoration: none;
+            color: black
+        }
+    }
+}
+.container_footer{
+    @include mixins.containerfooter();
+    i{
+        cursor: pointer;
+        &:hover{
+            color: variables.$color-FotterHover;
+            font-size: 2rem;
+        }
+    }
+
+}
+
+@media screen and(max-width: 900px){
+    main{
+        @include mixins.justifyCenter();
+        flex-direction: column;
+        .section1{
+            height: 750px;
+            width: 700px;
+        }
+        .section2{
+            width: 700px;
+            height: 400px;
+            padding: 10px 10px;
+            border-radius: 8px;
+            .estadisticas{
+                width: 500px;
+            }
+        }
+    }
+    .container_footer{
+        @include mixins.justifyCenter();
+        flex-direction: column;
+        font-size: 1rem;
+        i{
+            font-size: 2rem;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 375px) {
+    main{
+        width: 100%;
+        .section1{
+            height: 950px;
+            width: 320px;
+            text-align: center;
+            font-size: 1rem;
+            padding: 10px 10px;
+            h1{
+                font-size: 2rem;
+                
+            }
+            .grid{
+               width: 250px;
+               height: 800px;
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               margin-left: 30px;
+                img{
+                    width: 130px;
+                    height: 110px;
+                }
+            }
+        }
+        .section2{
+            margin-top: 10px;
+            width: 300px;
+            height: 450px;
+            font-size: 1rem;
+            .estadisticas{
+                width: 250px;
+                margin-bottom: 10px;
+                height: 50px;
+            }
+            #reiniciar{
+                margin-top: 40px;
+            
+
+            }
+        }
+    }
+    
+}
+

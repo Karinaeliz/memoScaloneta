@@ -1,0 +1,28 @@
+@import url("https://fonts.cdnfonts.com/css/pepminus10");
+@import url("https://fonts.cdnfonts.com/css/pixel-lcd7");
+@import url('https://fonts.cdnfonts.com/css/sf-fourche');
+
+
+//Fuentes de texto
+$txt-Pixel: "Pixel LCD7", sans-serif;
+$txt-Pepm: 'PEPminus10', sans-serif;
+$txt-Fourtc: 'SF Fourche', sans-serif;
+
+// Colores
+$F-Section:  rgba(255, 255, 255, 0.2);
+$F-ReiniciarHover:  rgba(107, 195, 247, 0.473);
+$color-FotterHover: #2980b9;
+$F-Boby: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+$F-Btn: rgba(9, 75, 255, 0.5);
+$Color-Title: rgb(18, 9, 99);
+$color-border: rgb(234, 238, 243);
+$color-hover:rgb(29, 26, 26);
+$color-btnHover: rgba(32, 124, 245, 0.5);
+
+//btn
+$border-btn: 1px solid #fff;
+$border-hover: 1px solid rgb(29, 153, 255);;
+
+
+//animacion
+$animacionWave: wave 1s ease-in-out infinite alternate;

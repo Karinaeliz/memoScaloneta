@@ -1,0 +1,108 @@
+@use 'mixins.scss';
+@use 'variables.scss';
+
+*{
+    @include mixins.formatogeneral();
+}
+body{
+    background: variables.$F-Boby;
+}
+.login-form{
+    @include mixins.justifyCenter();
+    flex-direction: column;
+    height: 100vh;
+    .container{
+        position: absolute;
+        margin: 0;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        #flag{
+            margin: 30px;
+            width: 300px;
+            height: 200px;
+            .flag_img{
+                position: relative;
+                background-image: url(../imagenes/bandera_argentina.jpg);
+                background-size: 300px 100%;
+                width: 1px;
+                height: 100%;
+                display: inline-block;
+                -webkit-animation: wave 1s ease-in-out infinite alternate;
+                        animation: wave 1s ease-in-out infinite alternate;
+
+
+            }
+            @-webkit-keyframes wave {
+                0% {
+                top: 5%;
+                }
+                100% {
+                top: -5%;
+                }
+            }
+            
+            @keyframes wave {
+                0% {
+                top: 5%;
+                }
+                100% {
+                top: -5%;
+                }
+            }
+        }
+    }
+    h1{
+        font-family: variables.$txt-Pixel;
+        color: variables.$Color-Title;
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+    .login_input{
+        border: 2px solid #333;
+        border-radius: 8px;
+        color: #333;
+        font-size: 1em;
+        margin-bottom: 15px;
+        max-width: 300px;
+        outline: none;
+        padding: 15px;
+        width: 100%;
+        font-family: variables.$txt-Pixel;
+
+    }
+    button{
+       @include mixins.btn(300px); 
+       &:hover{
+        background-color: #eee;
+        color: variables.$color-hover;
+        cursor: variables.$bnt-Cursor;
+       }
+    }
+}
+.container_footer{
+    @include mixins.containerfooter();
+    i{
+        cursor: variables.$bnt-Cursor;
+        &:hover{
+            color: variables.$color-FotterHover;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .login-form{
+        h1{
+            font-size: 1.5rem;
+        }
+        #flag{
+            margin: 20px;
+        }
+    }
+    .container_footer{
+        flex-direction: column;
+        font-size: 1rem;
+    }
+}

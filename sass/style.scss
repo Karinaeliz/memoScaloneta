@@ -73,18 +73,18 @@ body{
 
     }
     button{
-       @include mixins.btn(300px); 
+        @include mixins.btn_Nivel(300px); 
        &:hover{
         background-color: #eee;
         color: variables.$color-hover;
-        cursor: variables.$bnt-Cursor;
+        cursor: pointer;
        }
     }
 }
 .container_footer{
     @include mixins.containerfooter();
     i{
-        cursor: variables.$bnt-Cursor;
+        cursor: pointer;
         &:hover{
             color: variables.$color-FotterHover;
             font-size: 1.5rem;

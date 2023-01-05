@@ -1,17 +1,128 @@
-/* Error: Undefined mixin.
- *    ,
- * 76 |        @include mixins.btn(300px); 
- *    |        ^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   sass\style.scss 76:8  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 76 \2502         @include mixins.btn(300px); \d\a    \2502         ^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\style.scss 76:8  root stylesheet";
+@import url("https://fonts.cdnfonts.com/css/pepminus10");
+@import url("https://fonts.cdnfonts.com/css/pixel-lcd7");
+@import url("https://fonts.cdnfonts.com/css/sf-fourche");
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
 }
+
+body {
+  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.login-form .container {
+  position: absolute;
+  margin: 0;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login-form .container #flag {
+  margin: 30px;
+  width: 300px;
+  height: 200px;
+}
+.login-form .container #flag .flag_img {
+  position: relative;
+  background-image: url(../imagenes/bandera_argentina.jpg);
+  background-size: 300px 100%;
+  width: 1px;
+  height: 100%;
+  display: inline-block;
+  -webkit-animation: wave 1s ease-in-out infinite alternate;
+  animation: wave 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes wave {
+  0% {
+    top: 5%;
+  }
+  100% {
+    top: -5%;
+  }
+}
+@keyframes wave {
+  0% {
+    top: 5%;
+  }
+  100% {
+    top: -5%;
+  }
+}
+.login-form h1 {
+  font-family: "Pixel LCD7", sans-serif;
+  color: rgb(18, 9, 99);
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+.login-form .login_input {
+  border: 2px solid #333;
+  border-radius: 8px;
+  color: #333;
+  font-size: 1em;
+  margin-bottom: 15px;
+  max-width: 300px;
+  outline: none;
+  padding: 15px;
+  width: 100%;
+  font-family: "Pixel LCD7", sans-serif;
+}
+.login-form button {
+  background: rgba(9, 75, 255, 0.5);
+  border-radius: 8px;
+  border: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 15px;
+  max-width: 300px;
+  width: 100%;
+  font-family: "Pixel LCD7", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.login-form button:hover {
+  background-color: #eee;
+  color: rgb(29, 26, 26);
+  cursor: pointer;
+}
+
+.container_footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px;
+  font-family: "SF Fourche", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.container_footer i {
+  cursor: pointer;
+}
+.container_footer i:hover {
+  color: #2980b9;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .login-form h1 {
+    font-size: 1.5rem;
+  }
+  .login-form #flag {
+    margin: 20px;
+  }
+  .container_footer {
+    flex-direction: column;
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */

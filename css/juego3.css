@@ -195,9 +195,10 @@ main .section2 #inicio a {
 @media screen and (max-width: 375px) {
   main {
     width: 100%;
+    margin: 20px;
   }
   main .section1 {
-    height: 1600px;
+    height: 750px;
     width: 320px;
     text-align: center;
     font-size: 1rem;
@@ -207,15 +208,25 @@ main .section2 #inicio a {
     font-size: 2rem;
   }
   main .section1 .grid {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 0px;
     width: 250px;
-    height: 800px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-left: 30px;
+    height: 400px;
+    padding: 0px;
+    gap: 5px;
+    margin: 0px;
+    font-size: 1rem;
+    margin-bottom: 0px;
+    margin-top: 10px;
   }
   main .section1 .grid img {
-    width: 130px;
-    height: 110px;
+    width: 100px;
+    height: 50px;
   }
   main .section2 {
     margin-top: 10px;

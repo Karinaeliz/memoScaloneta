@@ -1,6 +1,6 @@
 let temporizador = false;
-let timerInicial = 15;
-let timer = 15;
+let timerInicial = 25;
+let timer = 25;
 let mostrarTiempo= document.getElementById('restante');
 let mostrarPuntaje= document.getElementById('puntaje');
 let winAudio= new Audio('../sound/gol-gol-gol.mp3');

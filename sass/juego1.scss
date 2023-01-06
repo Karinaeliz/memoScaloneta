@@ -98,7 +98,7 @@ main{
     main{
         width: 100%;
         .section1{
-            height: 950px;
+            height: 700px;
             width: 320px;
             text-align: center;
             font-size: 1rem;
@@ -109,13 +109,16 @@ main{
             }
             .grid{
                width: 250px;
-               height: 800px;
+               height: 600px;
                display: grid;
-               grid-template-columns: repeat(2, 1fr);
+               justify-self: center;
+               align-self: center;
                margin-left: 30px;
+               grid-template-columns: repeat(2, 1fr);
+               gap: 0px;
                 img{
-                    width: 130px;
-                    height: 110px;
+                    width: 100px;
+                    height: 80px;
                 }
             }
         }

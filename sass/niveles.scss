@@ -40,10 +40,15 @@ main{
 }
 .container_footer{
     @include mixins.containerfooter();
-    i{
-        cursor: variables.$bnt-Cursor;
-        &:hover{
-            color: variables.$color-FotterHover;
+    a{
+        color: black;
+        text-decoration: none;
+        i{
+            cursor: pointer;
+            &:hover{
+                color: variables.$color-FotterHover;
+                font-size: 2rem;
+            }
         }
     }
 }

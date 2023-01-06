@@ -51,11 +51,15 @@ main{
 }
 .container_footer{
     @include mixins.containerfooter();
-    i{
-        cursor: pointer;
-        &:hover{
-            color: variables.$color-FotterHover;
-            font-size: 2rem;
+    a{
+        color: black;
+        text-decoration: none;
+        i{
+            cursor: pointer;
+            &:hover{
+                color: variables.$color-FotterHover;
+                font-size: 2rem;
+            }
         }
     }
 
